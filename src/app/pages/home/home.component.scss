@@ -1,0 +1,11 @@
+:host {
+	app-body {
+		> *:nth-child(odd) {
+			background: dimgray;
+		}
+
+		> *:nth-child(even) {
+			background: lightslategray;
+		}
+	}
+}

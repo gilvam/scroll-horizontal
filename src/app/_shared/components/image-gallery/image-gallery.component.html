@@ -1,0 +1,11 @@
+<div class="gallery-container">
+	<button class="nav-button prev" (click)="scrollLeft()">&lt;</button>
+	<div class="gallery" #gallery>
+		@for (image of images; track image) {
+			<div class="gallery-item">
+				<img [src]="image" alt="Gallery Image" />
+			</div>
+		}
+	</div>
+	<button class="nav-button next" (click)="scrollRight()">&gt;</button>
+</div>

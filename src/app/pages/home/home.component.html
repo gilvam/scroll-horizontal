@@ -1,0 +1,9 @@
+<app-body>
+	<app-carousel />
+
+	@for (homeCourse of homeCourseList; track homeCourse) {
+		<app-slider [homeCourse]="homeCourse" />
+	}
+
+	<app-image-gallery />
+</app-body>

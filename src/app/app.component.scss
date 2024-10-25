@@ -1,0 +1,21 @@
+:host {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	grid-template-areas:
+		'header'
+		'body'
+		'footer';
+	height: 100vh;
+
+	app-header {
+		grid-area: header;
+	}
+
+	app-sidenav {
+		grid-area: body;
+	}
+
+	app-footer {
+		grid-area: footer;
+	}
+}

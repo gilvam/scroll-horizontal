@@ -1,0 +1,23 @@
+<div class="carousel">
+	<div class="carousel__inner">
+		@if (items.length) {
+			@for (item of items; track item; let i = $index) {
+				<div class="carousel__item" [class.carousel__item--active]="i === currentIndex">
+					<img [src]="item.image" alt="Image {{ i }}" class="carousel__image loading loading-animation" appImageLoading />
+					<div class="carousel__caption">
+						<h3 class="carousel__title">{{ item.title }}</h3>
+						<p class="carousel__description">{{ item.description }}</p>
+					</div>
+				</div>
+			}
+		}
+	</div>
+
+	<button class="carousel__control carousel__control--prev" mat-fab aria-label="previous slide" (click)="prevSlide()">
+		<mat-icon>arrow_back_ios</mat-icon>
+	</button>
+
+	<button class="carousel__control carousel__control--next" mat-fab aria-label="next slide" (click)="nextSlide()">
+		<mat-icon>arrow_forward_ios</mat-icon>
+	</button>
+</div>

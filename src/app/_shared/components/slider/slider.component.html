@@ -1,0 +1,35 @@
+<h2>{{ homeCourse.title }}</h2>
+
+<div class="slide">
+	<button
+		class="slide__control slide__control--prev"
+		[class.slide__control--hidden]="isScreenLessThanCards()"
+		mat-fab
+		aria-label="previous slide"
+		(click)="scrollPrev()"
+	>
+		<mat-icon>arrow_back_ios</mat-icon>
+	</button>
+	<div class="slide__content" [class.slide__content--center]="isScreenLessThanCards()" #slider>
+		@for (item of homeCourse.items; track item; let i = $index) {
+			<mat-card appearance="outlined">
+				<img mat-card-image [src]="item.image" alt="{{ i }}" appImageLoading />
+				<mat-card-content>
+					<p>{{ item.text }}</p>
+				</mat-card-content>
+				<mat-card-actions align="end">
+					<button mat-flat-button>COMPRAR</button>
+				</mat-card-actions>
+			</mat-card>
+		}
+	</div>
+	<button
+		class="slide__control slide__control--next"
+		[class.slide__control--hidden]="isScreenLessThanCards()"
+		mat-fab
+		aria-label="previous slide"
+		(click)="scrollNext()"
+	>
+		<mat-icon>arrow_forward_ios</mat-icon>
+	</button>
+</div>
