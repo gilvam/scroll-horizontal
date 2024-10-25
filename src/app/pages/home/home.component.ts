@@ -5,11 +5,12 @@ import { SliderComponent } from '../../_shared/components/slider/slider.componen
 import { HomeCourse } from './models/home-course.model';
 import { HomeCourseItem } from './models/home-course-item.model';
 import { ImageGalleryComponent } from '../../_shared/components/image-gallery/image-gallery.component';
+import { SliderSelectComponent } from '../../_shared/components/slider-select/slider-select.component';
 
 @Component({
 	selector: 'app-home',
 	standalone: true,
-	imports: [BodyComponent, CarouselComponent, SliderComponent, ImageGalleryComponent],
+	imports: [BodyComponent, CarouselComponent, SliderComponent, ImageGalleryComponent, SliderSelectComponent],
 	templateUrl: './home.component.html',
 	styleUrl: './home.component.scss'
 })

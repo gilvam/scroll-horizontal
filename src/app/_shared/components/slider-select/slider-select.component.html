@@ -1,0 +1,25 @@
+<div class="gallery-container">
+	<div #gallery appSliderSelectCenter>
+		@for (image of images; track image) {
+			<div class="gallery-item">
+				<img [src]="image" alt="Gallery Image" />
+			</div>
+		}
+	</div>
+</div>
+
+<div class="radio">
+	@for (item of images; track item; let i = $index) {
+		<label>
+			<input
+				class="radio-group__input"
+				type="radio"
+				name="radio"
+				[value]="i"
+				[checked]="i === selected"
+				(change)="select(i)"
+			/>
+			item {{ i }}
+		</label>
+	}
+</div>

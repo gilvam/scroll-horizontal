@@ -1,0 +1,77 @@
+$gap: 16px;
+
+.gallery-container {
+	display: flex;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+	min-height: 340px;
+
+	> div {
+		display: flex;
+		overflow-x: scroll;
+		scroll-behavior: smooth;
+		scrollbar-width: none;
+		padding: $gap $gap * 4;
+		gap: $gap;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		.gallery-item {
+			flex: 0 0 auto;
+			scroll-snap-align: start;
+			overflow: hidden;
+			display: inline-flex;
+			max-width: 400px;
+
+			img {
+				width: 100%;
+				height: auto;
+				object-fit: cover;
+			}
+
+			//@media (min-width: 320px) {
+			//	width: calc(100% / 1 - $gap);
+			//}
+			//
+			//@media (min-width: 576px) {
+			//	width: calc(100% / 2 - $gap);
+			//}
+			//
+			//@media (min-width: 768px) {
+			//	width: calc(100% / 3 - $gap);
+			//}
+			//
+			//@media (min-width: 992px) {
+			//	width: calc(100% / 4 - $gap);
+			//}
+			//
+			//@media (min-width: 1200px) {
+			//	width: calc(100% / 5 - $gap);
+			//}
+			//
+			//@media (min-width: 1400px) {
+			//	width: calc(100% / 6 - $gap);
+			//}
+		}
+
+	}
+}
+
+.radio {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+
+	label {
+		display: block;
+		margin-bottom: 10px;
+
+		input {
+			margin-right: 5px;
+		}
+	}
+}
