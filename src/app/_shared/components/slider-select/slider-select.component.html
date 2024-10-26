@@ -1,5 +1,5 @@
 <div class="gallery-container">
-	<div #gallery appSliderSelectCenter>
+	<div #gallery appSliderSelectCenter [(select)]="selected">
 		@for (image of images; track image) {
 			<div class="gallery-item">
 				<img [src]="image" alt="Gallery Image" />
