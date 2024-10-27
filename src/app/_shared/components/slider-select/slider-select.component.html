@@ -1,7 +1,8 @@
-<pre>selected: {{selected}}</pre>
-
 <div class="gallery-container">
-	<div #gallery appSliderSelectCenter [(select)]="selected">
+	<div #gallery
+		  [(appSliderSelectCenterScroll)]="selected"
+		  [appSliderSelectCenterSelect]="selected"
+	>
 		@for (image of images; track image) {
 			<div class="gallery-item">
 				<img [src]="image" alt="Gallery Image" />

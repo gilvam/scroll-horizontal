@@ -1,10 +1,11 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { SliderSelectCenterDirective } from './directives/slider-select-center.directive';
+import { SliderSelectCenterScrollDirective } from './directives/slider-select-center-scroll.directive';
+import { SliderSelectCenterSelectDirective } from './directives/slider-select-center-select.directive';
 
 @Component({
 	selector: 'app-slider-select',
 	standalone: true,
-	imports: [SliderSelectCenterDirective],
+	imports: [SliderSelectCenterScrollDirective, SliderSelectCenterSelectDirective],
 	templateUrl: './slider-select.component.html',
 	styleUrl: './slider-select.component.scss'
 })
