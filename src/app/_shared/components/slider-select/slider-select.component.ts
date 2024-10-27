@@ -17,8 +17,6 @@ export class SliderSelectComponent {
 	];
 	selected = 0;
 
-	constructor() {}
-
 	select(item: number): void {
 		this.selected = item;
 	}
