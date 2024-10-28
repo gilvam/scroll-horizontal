@@ -21,45 +21,41 @@ $gap: 16px;
 			display: none;
 		}
 
-		.gallery-item {
+		img {
 			scroll-snap-align: none center;
 			flex: 0 0 auto;
 			overflow: hidden;
 			display: inline-flex;
-			max-width: 400px;
-
-
-			img {
-				width: 100%;
-				height: auto;
-				object-fit: cover;
-
-			}
-
-			//@media (min-width: 320px) {
-			//	width: calc(100% / 1 - $gap);
-			//}
-			//
-			//@media (min-width: 576px) {
-			//	width: calc(100% / 2 - $gap);
-			//}
-			//
-			//@media (min-width: 768px) {
-			//	width: calc(100% / 3 - $gap);
-			//}
-			//
-			//@media (min-width: 992px) {
-			//	width: calc(100% / 4 - $gap);
-			//}
-			//
-			//@media (min-width: 1200px) {
-			//	width: calc(100% / 5 - $gap);
-			//}
-			//
-			//@media (min-width: 1400px) {
-			//	width: calc(100% / 6 - $gap);
-			//}
+			height: auto;
+			object-fit: cover;
+			width: 100%;
+			max-width: 280px;
 		}
+
+		//@media (min-width: 320px) {
+		//	width: calc(100% / 1 - $gap);
+		//}
+		//
+		//@media (min-width: 576px) {
+		//	width: calc(100% / 2 - $gap);
+		//}
+		//
+		//@media (min-width: 768px) {
+		//	width: calc(100% / 3 - $gap);
+		//}
+		//
+		//@media (min-width: 992px) {
+		//	width: calc(100% / 4 - $gap);
+		//}
+		//
+		//@media (min-width: 1200px) {
+		//	width: calc(100% / 5 - $gap);
+		//}
+		//
+		//@media (min-width: 1400px) {
+		//	width: calc(100% / 6 - $gap);
+		//}
+
 
 	}
 }
@@ -79,3 +75,31 @@ $gap: 16px;
 		}
 	}
 }
+
+// v2
+//.scroll-container {
+//	display: flex;
+//	overflow-x: auto;
+//	scroll-snap-type: x mandatory;
+//	scroll-behavior: smooth;
+//	padding: 0 10vw 0 10vw; /* Padding nas laterais para espaçamento */
+//	gap: 2vw; /* Espaçamento entre as imagens */
+//	padding-right: calc(10vw + 2vw); /* Adiciona padding extra à direita */
+//}
+//
+//.scroll-item {
+//	scroll-snap-align: center;
+//	flex: 0 0 80vw; /* 80% da tela para deixar um pouco das imagens vizinhas visíveis */
+//	display: flex;
+//	justify-content: center;
+//	align-items: center;
+//}
+//
+//.scroll-item img {
+//	width: 100%;
+//	height: auto;
+//	max-width: 100%;
+//	max-height: 300px;
+//	object-fit: contain;
+//}
+

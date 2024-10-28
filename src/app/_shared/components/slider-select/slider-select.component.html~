@@ -22,7 +22,6 @@
 	}
 </div>
 
-<!--v2-->
 <!--<div class="scroll-container">-->
 <!--	@for (image of images; track image) {-->
 <!--		<div class="scroll-item">-->
